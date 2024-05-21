@@ -1,0 +1,48 @@
+<p>true-false works!</p>
+
+<!-- <select #selectData (chang)="selectValue("j")">
+    <option value="true" >true</option>
+</select> -->
+
+<h1 *ngIf="show; than ifblock else elseBlock">True Block</h1>
+
+<ng-template #ifblock>
+    <h3>if Block</h3>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h3> else Block</h3>
+</ng-template>
+
+<!-- CLICK TO HIDE AND SHOW -->
+
+<button (click)="hideshow(true)">Show</button>
+<button (click)="hideshow(false)">Hide</button>
+<h1 *ngIf="hideshowValue; else Hide">
+    <h1 style="width: 200px;height: 200px; background-color: rgb(206, 152, 152); box-shadow: 15px 20px 10px rgba(0,0,0,0.5); text-align: center;">show</h1>
+</h1>
+
+<ng-template #Hide>
+    <h1> </h1>
+</ng-template>
+
+
+<form action="">
+    <select name="" id="" #selectData (change)="selectColor(selectData.value)" style="padding: 10px 40px;">
+        <option value=" "></option>
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+    </select>
+</form>
+
+
+    <div [ngSwitch]="color">
+        <h1 *ngSwitchCase="'black'" style="color: black;">Angular Switch Case Testing</h1>
+        <h1 *ngSwitchCase="'red'" style="color: red;">Angular Switch Case Testing</h1>
+        <h1 *ngSwitchCase="'green'" style="color: green;">Angular Switch Case Testing</h1>
+    </div>
+
+<h1 appCustom>Custom Directive</h1>
+
+

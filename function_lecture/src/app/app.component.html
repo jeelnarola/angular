@@ -1,0 +1,29 @@
+<button (click)="getHome('i am jeel narola')">Click Me</button>
+<br><br><br>
+<input type="text" #box (keyup)="getHome(box.value)" placeholder="Event keyUp">
+<br><br><br>
+<input type="text" #box1 (keydown)="getHome(box1.value)" placeholder="Event keyDown">
+<br><br><br>
+<input type="text" #box2 (blur)="getHome(box2.value)" placeholder="Event blur">
+<br><br><br>
+<input type="text" #box3 (input)="getHome(box3.value)" placeholder="Event Input">
+<br><br><br>
+<button style="padding: 10px 30px;cursor: pointer; " #btn1 value="Mouseover" (mouseover)="getHome(btn1.value)">Mouseover</button>
+<br><br><br>
+<button style="padding: 10px 30px;cursor: pointer; " #btn2 value="MouseLave" (mouseleave)="getHome(btn2.value)">MouseLave</button>
+<br><br><br>
+<button style="padding: 10px 30px;cursor: pointer; " #btn3 value="dubbleClick" (dblclick)="getHome(btn3.value)">dubble Click</button>
+
+
+<h1>Type And Print </h1>
+
+<input type="text" #input (keyup)="getValue(input.value)" placeholder="Typeing " />
+<p>Input Valu Print :- {{display}}</p>
+
+<h1>Click In Print </h1>
+<input type="text" #input2 placeholder="Typeing "/>
+<button (click)="getValue2(input2.value)">Click</button>
+<p>Input Valu Print :- {{displayClick}}</p>
+
+<app-counter></app-counter>
+<app-true-false></app-true-false>
