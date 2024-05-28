@@ -1,0 +1,9 @@
+<div>
+<h1>lifecycle works!</h1>
+
+<input type="text" #val>
+<button (click)="getValue(val)">Click</button>
+
+<app-child *ngIf="destoryValue" [myValue]="value">ngcontet:{{value}}</app-child>
+<button (click)="getBtnValue()">Destory</button>
+</div>

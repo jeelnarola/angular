@@ -1,0 +1,71 @@
+<hr>
+<h1>directives works!</h1>
+
+<!-- TYPE IN DIRECTIVES -->
+
+<!--
+    1. Componets directives
+    2. Structure directives
+    3. Attribute directives 
+-->
+ 
+<!-- Componets directives -->
+<p>Componets directives.</p>
+<button (click)="getClick()">Click</button>
+
+<!-- Structure directives -->
+
+<!-- 
+    i.   *ngIf
+    ii.  *ngFor
+    iii. *ngSwitch 
+-->
+<H4> Structure directives strat</H4>
+<!-- *ngIf -->
+<p>ngIf directives.</p>
+<h1 *ngIf="getif; else gtelse">If Statment</h1>
+<ng-template #gtelse><h1>else Statment</h1></ng-template>
+
+
+<!-- *ngFor -->
+<p>ngFor directives.</p>
+<ul>
+    <li *ngFor="let item of users" >
+        {{item.name}}
+    </li>
+</ul>
+
+<!-- *ngSwitch  -->
+<p>ngSwitch directives.</p>
+<select name="" id="" #select (change)="getChengeColor(select.value)">
+    <option value=" "> </option>
+    <option value="red">red</option>
+    <option value="pink">pink</option>
+    <option value="skyblue">skyblue</option>
+</select>
+
+<div [ngSwitch]="color">
+
+    <h1 *ngSwitchCase="'red'" style="color: red;">Directives ngSwitch RED</h1>
+    <h1 *ngSwitchCase="'pink'" style="color: pink;">Directives ngSwitch PINK</h1>
+    <h1 *ngSwitchCase="'skyblue'" style="color: skyblue;">Directives ngSwitch SKYBLUE</h1>
+</div>
+<H4> Structure directives End</H4>
+
+<!-- Attribute directives  -->
+
+<!-- 
+    1.ngstyel
+    2.ngclass
+ -->
+<h4>Attribute directives Strat</h4>
+<h4>ngStyle Attribute directives</h4>
+
+<h5 [ngStyle]="{'color':'white','background-color':'red','font-size':'30px'}">ngstyle Attribute directives</h5>
+<h5 [ngStyle]="addStyle()">ngstyle Function</h5>
+<h4 [style]="{'color': 'red'}">Attribute directives End</h4>
+
+<hr>
+
+
+<button [ngClass]="['btn']">click</button>
